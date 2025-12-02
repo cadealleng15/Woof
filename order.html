@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Woof | Pre-Order</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<div class="page">
+  <header>
+    <div class="nav-container">
+      <a class="brand" href="index.html">
+        <div class="brand-logo"><span>🐾</span></div>
+        <div class="brand-text">
+          <strong>Woof</strong>
+          <small>Health & Fitness for Dogs</small>
+        </div>
+      </a>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="product.html">Product & Pricing</a></li>
+          <li><a class="primary-link" href="order.html">Order Now</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="section-header">
+        <div>
+          <h1 class="section-title">Pre-order Woof for your dog</h1>
+          <p class="section-subtitle">
+            Complete the form below to reserve your Woof smart collar and choose
+            a membership plan. This is a mock order form for class purposes only.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="form-wrapper">
+        <form id="orderForm">
+          <div class="form-grid">
+            <!-- Owner info -->
+            <div class="form-group">
+              <label for="ownerName">Your name</label>
+              <input id="ownerName" name="ownerName" type="text" placeholder="Jane Doe" required />
+              <span class="form-hint">Legal name for shipping & billing.</span>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" placeholder="you@example.com" required />
+              <span class="form-hint">Order confirmation & app login link.</span>
+            </div>
+
+            <div class="form-group">
+              <label for="phone">Phone (optional)</label>
+              <input id="phone" name="phone" type="tel" placeholder="(555) 555-5555" />
+              <span class="form-hint">Used only for shipping questions.</span>
+            </div>
+
+            <!-- Shipping -->
+            <div class="form-group">
+              <label for="address">Shipping address</label>
+              <input id="address" name="address" type="text" placeholder="123 Main St, Hoboken, NJ" required />
+            </div>
+
+            <!-- Dog info -->
+            <div class="form-group">
+              <label for="dogName">Dog’s name</label>
+              <input id="dogName" name="dogName" type="text" placeholder="Buddy" required />
+            </div>
+
+            <div class="form-group">
+              <label for="dogBreed">Dog’s breed</label>
+              <input id="dogBreed" name="dogBreed" type="text" placeholder="Golden Retriever" />
+            </div>
+
+            <div class="form-group">
+              <label for="dogAge">Dog’s age</label>
+              <input id="dogAge" name="dogAge" type="number" min="0" max="25" placeholder="3" />
+            </div>
+
+            <div class="form-group">
+              <label for="collarSize">Collar size</label>
+              <select id="collarSize" name="collarSize" required>
+                <option value="">Select size</option>
+                <option value="S">Small (9–13" neck)</option>
+                <option value="M">Medium (13–18" neck)</option>
+                <option value="L">Large (18–24" neck)</option>
+              </select>
+              <span class="form-hint">Measure snugly where your dog’s collar normally sits.</span>
+            </div>
+
+            <!-- Membership plan -->
+            <div class="form-group full">
+              <label for="plan">Choose membership plan</label>
+              <select id="plan" name="plan" required>
+                <option value="">Select a plan</option>
+                <option value="basic">Woof Basic — $9 / month</option>
+                <option value="plus">Woof Plus — $19 / month (Most popular)</option>
+                <option value="pro">Woof Pro — $29 / month</option>
+              </select>
+              <span class="form-hint">
+                All plans require a one-time hardware purchase of $149. Membership can be cancelled anytime.
+              </span>
+            </div>
+
+            <!-- Payment (mock only) -->
+            <div class="form-group">
+              <label for="cardNumber">Card number</label>
+              <input id="cardNumber" name="cardNumber" type="text" placeholder="1234 5678 9012 3456" required />
+            </div>
+
+            <div class="form-group">
+              <label for="expiry">Expiry</label>
+              <input id="expiry" name="expiry" type="text" placeholder="MM/YY" required />
+            </div>
+
+            <div class="form-group">
+              <label for="cvc">CVC</label>
+              <input id="cvc" name="cvc" type="text" placeholder="123" required />
+            </div>
+
+            <div class="form-group">
+              <label for="country">Country</label>
+              <input id="country" name="country" type="text" placeholder="United States" required />
+            </div>
+
+            <!-- Notes -->
+            <div class="form-group full">
+              <label for="notes">Notes for Woof team (optional)</label>
+              <textarea id="notes" name="notes" placeholder="Share anything we should know about your dog (medical history, training level, etc.)."></textarea>
+            </div>
+          </div>
+
+          <div class="form-footer">
+            <div class="order-summary">
+              <div><strong>Order summary</strong></div>
+              <div>Woof Smart Collar hardware: <strong>$149 one-time</strong></div>
+              <div>Membership: <strong id="summaryPlan">$0 / month (select a plan)</strong></div>
+              <div class="badge-secure" style="margin-top:0.25rem;">
+                🔒 Secure mock checkout (no real charges)
+              </div>
+            </div>
+            <button type="submit" class="btn btn-primary">
+              Submit Pre-Order (Mock)
+            </button>
+          </div>
+
+          <div id="toast" class="toast">
+            ✅ Thanks! This is a mock submission. In a real store, you’d now see an order confirmation page
+            and receive a confirmation email.
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <span>© 2025 Woof Labs. Concept site for coursework.</span>
+      <span>No real payments are collected on this page.</span>
+    </div>
+  </footer>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
